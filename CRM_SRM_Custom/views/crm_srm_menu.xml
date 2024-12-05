@@ -1,0 +1,10 @@
+<odoo>
+    <!-- Parent Menu -->
+    <menuitem id="menu_crm_srm" name="CRM-SRM Integration" sequence="10" />
+
+    <!-- Leads Menu -->
+    <menuitem id="menu_crm_leads" name="Leads" parent="menu_crm_srm" action="crm.crm_lead_all_leads" sequence="20" />
+
+    <!-- Purchase Orders Menu -->
+    <menuitem id="menu_purchase_orders" name="Purchase Orders" parent="menu_crm_srm" action="purchase.purchase_form_action" sequence="30" />
+</odoo>

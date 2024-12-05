@@ -1,0 +1,2 @@
+access_crm_lead_user,crm.lead user,model_crm_lead,base.group_user,1,0,0,0
+access_purchase_order_user,purchase.order user,model_purchase_order,base.group_user,1,0,0,0
