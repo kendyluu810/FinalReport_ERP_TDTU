@@ -1,0 +1,22 @@
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="menu_make_to_stock" name="Make-To-Stock-Custom" sequence="1" />
+
+    <!-- Submenus -->
+    <menuitem id="menu_make_to_stock_products"
+              name="Products"
+              parent="menu_make_to_stock"
+              sequence="1"
+              action="stock.product_template_action_product"/>
+    <menuitem id="menu_make_to_stock_boms"
+              name="BOMs"
+              parent="menu_make_to_stock"
+              sequence="2"
+              action="mrp.mrp_bom_form_action"/>
+    <menuitem id="menu_make_to_stock_purchases"
+              name="Purchases"
+              parent="menu_make_to_stock"
+              sequence="3"
+              action="stock.action_picking_type_list"/>
+
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_purchase_order_form_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <!-- Adding a button to trigger the method -->
+            <header>
+                <button name="create_purchase_order" type="object" string="Create MTS Purchase Order"
+                        class="btn-primary oe_button"/>
+            </header>
+        </field>
+    </record>
+
+    <!-- Adding the view to the action menu -->
+    <record id="action_purchase_order_custom" model="ir.actions.act_window">
+        <field name="name">Make-To-Stock Purchases</field>
+        <field name="res_model">purchase.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Adding the menu item -->
+    <menuitem id="menu_purchase_mts" name="MTS Purchases"
+              parent="purchase.menu_purchase_root"
+              action="action_purchase_order_custom" sequence="20"/>
+</odoo>
